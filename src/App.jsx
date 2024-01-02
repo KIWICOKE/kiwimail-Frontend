@@ -1,15 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import "./App.css";
-import MailboxPage from "./MailboxPage";
-import ComposePage from "./ComposePage";
-import LoginPage from "./LoginPage";
+import MailboxPage from "./pages/MailboxPage";
+import ComposePage from "./pages/ComposePage";
+import LoginPage from "./pages/LoginPage";
 import Snowfall from "./Snowfall";
-import SignImg from "./SignPixel.png";
+import SignImg from "./assets/SignPixel.png";
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="app-container">
         <Snowfall />
 
@@ -40,7 +40,7 @@ const App = () => {
           <Route path="/compose" element={<ComposePage />} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };
 
