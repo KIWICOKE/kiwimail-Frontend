@@ -1,15 +1,18 @@
 import Header from "../components/Header";
 import postbox from "../assets/postbox.jpeg";
+import { Link } from "react-router-dom";
 
-const PagePostbox = () => {
+const PostboxPage = () => {
   return (
     <div>
       <Header></Header>
-      <div className="postbox">
-        <img src={postbox} alt="postbox"></img>
-      </div>
+      <Link to="/post">
+        <div className="postbox">
+          <img src={postbox} alt="postbox"></img>
+        </div>
+      </Link>
     </div>
   );
 };
 
-export default PagePostbox;
+export default PostboxPage;

@@ -1,4 +1,5 @@
 import menu from "../assets/menu.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const style = {
@@ -7,10 +8,12 @@ const Header = () => {
     paddingLeft: "100px",
   };
   return (
-    <div className="header">
-      <h1>이혁의 우편함</h1>
-      <img src={menu} alt="menu" style={style}></img>
-    </div>
+    <Link to="/">
+      <div className="header">
+        <h1>이혁의 우편함</h1>
+        <img src={menu} alt="menu" style={style}></img>
+      </div>
+    </Link>
   );
 };
 

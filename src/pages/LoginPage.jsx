@@ -1,11 +1,13 @@
+import Header from "../components/Header";
 import Login from "../components/Login";
 
-const PageLogin = () => {
+const LoginPage = () => {
   return (
     <div>
+      <Header></Header>
       <Login></Login>
     </div>
   );
 };
 
-export default PageLogin;
+export default LoginPage;

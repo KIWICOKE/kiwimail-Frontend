@@ -1,12 +1,12 @@
 import Header from "../components/Header";
 import Post from "../components/Post";
 
-const PagePosts = () => {
+const PostListPage = () => {
   return (
     <div>
       <div className="head">
         <Header className="header"></Header>
-        <h3 className="header2">총 3개의 편지가 왔습니다.</h3>
+        <h3 className="header">총 3개의 편지가 왔습니다.</h3>
       </div>
 
       <br />
@@ -35,4 +35,4 @@ const PagePosts = () => {
   );
 };
 
-export default PagePosts;
+export default PostListPage;
