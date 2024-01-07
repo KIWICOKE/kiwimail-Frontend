@@ -7,7 +7,7 @@ const PostboxPage = () => {
     <div>
       <Header></Header>
       <Link to="/post">
-        <div className="postbox">
+        <div className="postbox image-container">
           <img src={postbox} alt="postbox"></img>
         </div>
       </Link>

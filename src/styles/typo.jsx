@@ -1,4 +1,4 @@
-import { css } from "emotion";
+import { css } from "@emotion/react";
 
 export const calcRem = (px) => `${px / 16}rem`;
 
