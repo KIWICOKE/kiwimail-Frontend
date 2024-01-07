@@ -1337,6 +1337,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"emotion-reset@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "emotion-reset@npm:3.0.1"
+  peerDependencies:
+    "@emotion/react": ">=11"
+  checksum: 54464cdcd020fd8ca2f0f6249b2927bd61f12c162513f54a4735b6bdae1242a1ad376997abd194da425c2dd0e3bcb49e8ff3f9a8eb7477fa25096d81f3dc5e0e
+  languageName: node
+  linkType: hard
+
+"emotion@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "emotion@npm:11.0.0"
+  checksum: 273d4e0573c07e2fffcc5f8f0c9e35b9117be03c1317ec5b786a1dfaff6162d34e770c03ff0597d84909844f480aa3b5cb4017f38ee40db89296387abbf5af54
+  languageName: node
+  linkType: hard
+
 "encoding@npm:^0.1.13":
   version: 0.1.13
   resolution: "encoding@npm:0.1.13"
@@ -2508,6 +2524,8 @@ __metadata:
     "@types/react": "npm:^18.2.43"
     "@types/react-dom": "npm:^18.2.17"
     "@vitejs/plugin-react": "npm:^4.2.1"
+    emotion: "npm:^11.0.0"
+    emotion-reset: "npm:^3.0.1"
     eslint: "npm:^8.55.0"
     eslint-plugin-react: "npm:^7.33.2"
     eslint-plugin-react-hooks: "npm:^4.6.0"
