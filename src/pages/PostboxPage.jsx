@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import postbox from "../assets/postbox.jpeg";
+import postbox from "../assets/postbox.png";
 import { Link } from "react-router-dom";
 
 const PostboxPage = () => {
