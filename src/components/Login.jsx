@@ -1,25 +1,25 @@
 import { useState } from "react";
 
-const submitLogin = async (e) => {
-  e.preventDefault();
-  console.log(e.target);
-
-  await fetch("http://localhost:5176/login", {
-    method: "POST",
-    body: JSON.stringify(),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-    });
-};
-
 const Login = () => {
   const [formValue, setFormValue] = useState({
     name: " ",
     insta: " ",
     email: " ",
   });
+
+  const submitLogin = async (e) => {
+    e.preventDefault();
+    console.log(formValue);
+
+    await fetch("http://localhost:5176/login", {
+      method: "POST",
+      body: formValue,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
 
   return (
     <div className="login">
