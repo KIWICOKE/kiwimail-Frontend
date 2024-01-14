@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import postbox from "../assets/postbox.jpeg";
+import postbox from "../assets/postbox.png";
 import { Link } from "react-router-dom";
 
 const PostboxPage = () => {
@@ -7,7 +7,7 @@ const PostboxPage = () => {
     <div>
       <Header></Header>
       <Link to="/post">
-        <div className="postbox">
+        <div className="postbox image-container">
           <img src={postbox} alt="postbox"></img>
         </div>
       </Link>
