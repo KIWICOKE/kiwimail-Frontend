@@ -1,16 +1,17 @@
 import { css } from "@emotion/react";
 
-const ButtonDefault = () => {
+const Input = (value) => {
   return (
-    <button
+    <input
+      value={value}
       css={css`
         width: 327px;
-        height: 56px;
+        height: 40px;
         background-color: #d9d9d9;
         color: #000000;
       `}
-    ></button>
+    ></input>
   );
 };
 
-export default ButtonDefault;
+export default Input;
