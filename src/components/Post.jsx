@@ -1,3 +1,4 @@
+import { css } from "@emotion/react";
 import image from "../assets/envelope.webp";
 
 const Post = () => {
@@ -7,7 +8,14 @@ const Post = () => {
   };
   return (
     <div>
-      <img src={image} alt="envelop" style={style}></img>
+      <img
+        src={image}
+        alt="envelop"
+        css={css`
+          width: 80px;
+          height: 80px;
+        `}
+      ></img>
     </div>
   );
 };
