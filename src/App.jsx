@@ -8,11 +8,14 @@ import PostboxPage from "./pages/PostboxPage";
 import PostListPage from "./pages/PostListPage";
 import SignPage from "./pages/SignPage";
 
+import TestPage from "./pages-new/TestPage";
+
 const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<SignPage />}></Route>
+        <Route path="/" element={<TestPage />}></Route>
+        <Route path="/sign" element={<SignPage />}></Route>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/postbox" element={<PostboxPage />} />
         <Route path="/compose" element={<ComposePage />} />
