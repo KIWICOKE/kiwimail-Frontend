@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
 const HeaderMailboxSub = ({ count }) => {
@@ -14,3 +15,5 @@ const HeaderMailboxSub = ({ count }) => {
     </div>
   );
 };
+
+export default HeaderMailboxSub;
