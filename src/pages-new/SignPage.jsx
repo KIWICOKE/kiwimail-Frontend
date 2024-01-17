@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+
 import { css } from "@emotion/react";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
@@ -6,18 +8,29 @@ const SignPage = () => {
   return (
     <div
       css={css`
-        justify-content: center;
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        display: flex;
       `}
     >
       <Link to="/login">
-        <Button>로그인</Button>
+        <Button text="로그인"></Button>
       </Link>
+      <br />
       <Link to="/mailbox">
-        <Button>우편함</Button>
+        <Button text="우편함"></Button>
       </Link>
+      <br />
       <Link to="/write">
-        <Button>편지 작성하기</Button>
+        <Button text="편지 작성하기"></Button>
       </Link>
+      <br />
     </div>
   );
 };
+
+export default SignPage;

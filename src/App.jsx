@@ -2,11 +2,11 @@ import React from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import ComposePage from "./pages/ComposePage";
-import LoginPage from "./pages/LoginPage";
+import LoginPage from "./pages-new/LoginPage";
 
 import PostboxPage from "./pages/PostboxPage";
 import PostListPage from "./pages/PostListPage";
-import SignPage from "./pages/SignPage";
+import SignPage from "./pages-new/SignPage";
 
 import TestPage from "./pages-new/TestPage";
 
