@@ -5,7 +5,7 @@ const Button = ({ text }) => {
     width: "327px",
     height: "56px",
     padding: "10px",
-    backgroundColor: "#d9d9d9",
+    backgroundColor: "#f5f5f5",
     color: "#000000",
     border: "none",
     borderRadius: "24px",
@@ -13,7 +13,7 @@ const Button = ({ text }) => {
     fontWeight: "bold",
 
     "&:hover": {
-      backgroundColor: "#b9b9b9",
+      backgroundColor: "#d9d9d9",
     },
   };
 

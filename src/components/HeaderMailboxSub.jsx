@@ -5,9 +5,9 @@ const HeaderMailboxSub = ({ count }) => {
   return (
     <div
       css={css`
-        width: 327px;
+        width: 343px;
         height: 24px;
-        background-color: #d9d9d9;
+        background-color: transparent;
         padding-left: 32px;
       `}
     >

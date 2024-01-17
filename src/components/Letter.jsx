@@ -7,10 +7,22 @@ const Letter = () => {
       css={css`
         width: 327px;
         height: 480px;
-        background-color: #d9d9d9;
+
+        border-radius: 32px;
       `}
     >
-      <textarea></textarea>
+      <textarea
+        css={css`
+          width: 279px;
+          height: 432px;
+          background-color: #f5f5f5;
+          padding: 24px;
+          font-size: 16px;
+          resize: none;
+          border-radius: 32px;
+          border: none;
+        `}
+      ></textarea>
     </div>
   );
 };
