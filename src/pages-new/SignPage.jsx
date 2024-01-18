@@ -9,10 +9,9 @@ const SignPage = () => {
     <div
       css={css`
         text-align: center;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
+        top: 200px;
+
         flex-direction: column;
         display: flex;
       `}
