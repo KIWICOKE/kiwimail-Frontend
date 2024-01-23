@@ -5,8 +5,18 @@ import envelope from "../assets/envelope.webp";
 
 const Envelope = () => {
   return (
-    <div>
-      <img src={envelope} alt="envelope"></img>
+    <div
+      css={css`
+        text-align: center;
+      `}
+    >
+      <img
+        src={envelope}
+        alt="envelope"
+        css={css`
+          width: 80px;
+        `}
+      ></img>
       <div>이혁</div>
     </div>
   );
