@@ -4,7 +4,7 @@ import "./App.css";
 import ComposePage from "./pages/ComposePage";
 import LoginPage from "./pages-new/LoginPage";
 
-import PostboxPage from "./pages/PostboxPage";
+import PostboxPage from "./pages-new/PostboxPage";
 import PostListPage from "./pages/PostListPage";
 import SignPage from "./pages-new/SignPage";
 
