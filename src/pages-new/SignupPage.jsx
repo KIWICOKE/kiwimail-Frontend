@@ -7,7 +7,7 @@ import HeaderDefault from "../components/HeaderDefault";
 import Input from "../components/Input";
 import { Switch } from "@mui/material";
 
-const LoginPage = () => {
+const SignupPage = () => {
   return (
     <div
       css={css`
@@ -69,4 +69,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default SignupPage;
