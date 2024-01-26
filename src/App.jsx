@@ -12,24 +12,31 @@ import PostListPage from "./pages/PostListPage";
 
 import PostPage from "./pages-new/PostPage";
 import ComposePage from "./pages/ComposePage";
-import HomeHeader from "./\blayouts/HomeHeader";
+import HomeHeader from "./layouts/HomeHeader";
+import HomeDefault from "./layouts/HomeDefault";
 
 const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomeHeader />}>
-          <Route path="test" element={<TestPage />}></Route>
+        <Route path="/postbox" element={<HomeDefault />}>
+          <Route path=":uuid" element={<PostboxPage />} />
+        </Route>
+        <Route path="/postlist" element={<HomeDefault />}>
+          <Route path=":uuid" element={<PostListPage />} />
+        </Route>
+        <Route path="/post" element={<HomeDefault />}>
+          <Route path=":postid" element={<PostPage />} />
+        </Route>
+        <Route path="/write" element={<HomeDefault />}>
+          <Route path="" element={<ComposePage />} />
         </Route>
 
-        <Route path="/sign" element={<SignPage />}></Route>
-        <Route path="/signup" element={<SignupPage />} />
-
-        <Route path="/postbox/:uuid" element={<PostboxPage />} />
-        <Route path="/postlist/:uuid" element={<PostListPage />} />
-
-        <Route path="/post/:pid" element={<PostPage />} />
-        <Route path="/compose" element={<ComposePage />} />
+        <Route path="/" element={<HomeHeader />}>
+          <Route path="/sign" element={<SignPage />}></Route>
+          <Route path="test" element={<TestPage />}></Route>
+          <Route path="signup" element={<SignupPage />} />
+        </Route>
       </Routes>
     </>
   );

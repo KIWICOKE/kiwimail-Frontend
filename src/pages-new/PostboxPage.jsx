@@ -1,31 +1,37 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from "@emotion/react";
-import Button from "../components/Button";
-import { Link } from "react-router-dom";
-import HeaderDefault from "../components/HeaderDefault";
-import Input from "../components/Input";
-import { Switch } from "@mui/material";
+
+import { useParams } from "react-router-dom";
 import HeaderMailbox from "../components/HeaderMailbox";
 import HeaderMailboxSub from "../components/HeaderMailboxSub";
-import Envelope from "../components/Envelope";
+import Title from "../components/Title";
+import Subtitle from "../components/Subtitle";
 
-const LoginPage = () => {
+const DATABASE = [
+  {
+    user_id: 1,
+    name: "진짜이혁",
+  },
+];
+
+const PostboxPage = () => {
+  const user_id = useParams().uuid;
+  const user = DATABASE.find((element) => {
+    element.user_id == user_id;
+  }); // user 찾는 로직 수정 필요
+
   return (
     <div>
-      <HeaderMailbox name={"이혁"}></HeaderMailbox>
-      <HeaderMailboxSub count={10}></HeaderMailboxSub>
+      <Title name={user?.name || "가짜이혁"}></Title>
+      <Subtitle count={10}></Subtitle>
       <div
         css={css`
           display: flex;
         `}
-      >
-        <Envelope></Envelope>
-        <Envelope></Envelope>
-        <Envelope></Envelope>
-      </div>
+      ></div>
     </div>
   );
 };
 
-export default LoginPage;
+export default PostboxPage;
