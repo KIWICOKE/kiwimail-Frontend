@@ -12,12 +12,15 @@ import PostListPage from "./pages/PostListPage";
 
 import PostPage from "./pages-new/PostPage";
 import ComposePage from "./pages/ComposePage";
+import HomeHeader from "./\blayouts/HomeHeader";
 
 const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<TestPage />}></Route>
+        <Route path="/" element={<HomeHeader />}>
+          <Route path="test" element={<TestPage />}></Route>
+        </Route>
 
         <Route path="/sign" element={<SignPage />}></Route>
         <Route path="/signup" element={<SignupPage />} />
