@@ -1,19 +1,51 @@
-import menu from "../assets/menu.png";
-import { Link } from "react-router-dom";
+/** @jsxImportSource @emotion/react */
+
+import { css } from "@emotion/react";
+import Back from "../assets/BackButton.svg";
 
 const Header = () => {
-  const style = {
-    width: "40px",
-    height: "40px",
-    paddingLeft: "100px",
-  };
   return (
-    <Link to="/">
-      <div className="header">
-        <h1>이혁의 우편함</h1>
-        <img src={menu} alt="menu" style={style}></img>
+    <div>
+      <div
+        css={css`
+          width: 100%;
+          height: 128px;
+        `}
+      >
+        <div
+          css={css`
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            top: 88px;
+            padding: 0px 16px 0px 16px;
+          `}
+        >
+          <img
+            src={Back}
+            alt={"BackButton"}
+            css={css`
+              height: 24px;
+            `}
+            onClick={() => {}}
+          ></img>
+          <div
+            css={css`
+              font-size: 20px;
+              font-weight: bold;
+            `}
+          >
+            회원가입
+          </div>
+          <div
+            css={css`
+              width: 16px;
+            `}
+          ></div>
+        </div>
       </div>
-    </Link>
+    </div>
   );
 };
 
