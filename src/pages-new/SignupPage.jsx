@@ -17,6 +17,7 @@ const SignupPage = () => {
         justify-content: space-between;
       `}
     >
+      <Header></Header>
       <HeaderDefault text="로그인"></HeaderDefault>
       <br />
       <br />

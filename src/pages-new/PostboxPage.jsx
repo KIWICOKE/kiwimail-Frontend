@@ -3,10 +3,11 @@
 import { css } from "@emotion/react";
 
 import { useParams } from "react-router-dom";
-import HeaderMailbox from "../components/HeaderMailbox";
-import HeaderMailboxSub from "../components/HeaderMailboxSub";
+
 import Title from "../components/Title";
 import Subtitle from "../components/Subtitle";
+
+import Postbox from "../assets/postbox.png";
 
 const DATABASE = [
   {
@@ -16,7 +17,7 @@ const DATABASE = [
 ];
 
 const PostboxPage = () => {
-  const user_id = useParams().uuid;
+  const user_id = useParams().user_id;
   const user = DATABASE.find((element) => {
     element.user_id == user_id;
   }); // user 찾는 로직 수정 필요
@@ -30,6 +31,7 @@ const PostboxPage = () => {
           display: flex;
         `}
       ></div>
+      <img src={Postbox}></img>
     </div>
   );
 };

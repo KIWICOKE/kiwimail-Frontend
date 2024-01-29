@@ -16,6 +16,7 @@ const SignPage = () => {
         display: flex;
       `}
     >
+      <Header></Header>
       <Link to="/login">
         <Button text="로그인"></Button>
       </Link>
