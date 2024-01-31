@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import TestPage from "./pages-new/TestPage";
@@ -22,11 +22,11 @@ const App = () => {
         <Route path="/" element={<Home />}>
           <Route path="/sign" element={<SignPage />}></Route>
           <Route path="/test" element={<TestPage />}></Route>
-          <Route path="signup" element={<SignupPage />} />
-          <Route path="postbox/:user_id" element={<PostboxPage />} />
-          <Route path="postlist/:user_id" element={<PostListPage />} />
-          <Route path="post/:post_id" element={<PostPage />} />
-          <Route path="write/:post_id" element={<ComposePage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/postbox/:user_id" element={<PostboxPage />} />
+          <Route path="/postlist/:user_id" element={<PostListPage />} />
+          <Route path="/post/:post_id" element={<PostPage />} />
+          <Route path="/write/:post_id" element={<ComposePage />} />
         </Route>
       </Routes>
     </>

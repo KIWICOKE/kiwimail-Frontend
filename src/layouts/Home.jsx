@@ -15,10 +15,11 @@ const HomeDefault = () => {
     >
       <div
         css={css`
-          background: var(
+          /*background: var(
             --background,
             linear-gradient(180deg, #f5f5f5 70%, #d9d9d9 100%)
-          );
+          );*/
+          background-color: #ffffff;
           width: 375px;
           height: 812px;
         `}

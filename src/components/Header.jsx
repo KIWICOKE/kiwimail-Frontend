@@ -3,7 +3,7 @@
 import { css } from "@emotion/react";
 import Back from "../assets/BackButton.svg";
 
-const Header = () => {
+const Header = ({ text }) => {
   return (
     <div>
       <div
@@ -36,7 +36,7 @@ const Header = () => {
               font-weight: bold;
             `}
           >
-            회원가입
+            {text}
           </div>
           <div
             css={css`
