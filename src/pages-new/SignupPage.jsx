@@ -3,7 +3,7 @@
 import { css } from "@emotion/react";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
-import HeaderDefault from "../components/HeaderDefault";
+
 import Input from "../components/Input";
 import { Switch } from "@mui/material";
 
@@ -18,7 +18,7 @@ const SignupPage = () => {
       `}
     >
       <Header></Header>
-      <HeaderDefault text="로그인"></HeaderDefault>
+
       <br />
       <br />
       <br />
