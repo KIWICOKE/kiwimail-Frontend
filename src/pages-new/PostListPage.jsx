@@ -1,36 +1,17 @@
 import Header from "../components/Header";
-import Post from "../components/Post";
+import Envelope from "../components/Envelope";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const PostListPage = () => {
+  const user_id = useParams().user_id;
+
+  useEffect(() => {}, []);
+
   return (
     <div>
-      <div className="head">
-        <Header className="header"></Header>
-        <h3 className="header">총 3개의 편지가 왔습니다.</h3>
-      </div>
-
-      <br />
-
-      <div className="post">
-        <Post></Post>
-        <Post></Post>
-        <Post></Post>
-        <br />
-      </div>
-
-      <div className="post">
-        <Post></Post>
-        <Post></Post>
-        <Post></Post>
-        <br />
-      </div>
-
-      <div className="post">
-        <Post></Post>
-        <Post></Post>
-        <Post></Post>
-        <br />
-      </div>
+      <Header text={"이혁의 우편함"}></Header>
+      <Envelope></Envelope>
     </div>
   );
 };

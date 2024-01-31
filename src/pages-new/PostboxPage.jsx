@@ -29,9 +29,18 @@ const PostboxPage = () => {
       <div
         css={css`
           display: flex;
+          justify-content: center;
         `}
-      ></div>
-      <img src={Postbox}></img>
+      >
+        <img
+          src={Postbox}
+          alt="postbox"
+          css={css`
+            width: 256px;
+            height: 256px;
+          `}
+        ></img>
+      </div>
     </div>
   );
 };

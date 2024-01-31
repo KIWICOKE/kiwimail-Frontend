@@ -20,8 +20,8 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Home />}>
-          <Route path="/sign" element={<SignPage />}></Route>
           <Route path="/test" element={<TestPage />}></Route>
+          <Route path="/sign" element={<SignPage />}></Route>
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/postbox/:user_id" element={<PostboxPage />} />
           <Route path="/postlist/:user_id" element={<PostListPage />} />
