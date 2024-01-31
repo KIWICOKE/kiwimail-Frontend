@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 
 import Input from "../components/Input";
 import { Switch } from "@mui/material";
+import Header from "../components/Header";
+import Space from "../components/Space";
 
 const SignupPage = () => {
   return (
@@ -17,31 +19,20 @@ const SignupPage = () => {
         justify-content: space-between;
       `}
     >
-      <Header></Header>
-
-      <br />
-      <br />
-      <br />
-      <br />
-
+      <Header text={"회원가입"}></Header>
+      <Space size={128}></Space>
       <form
         css={css`
-          height: 515px;
+          height: 556px;
         `}
       >
         <Input value={"이름"}></Input>
-        <br />
-        <br />
-
+        <Space size={20}></Space>
         <Input value={"Instagram ID"}></Input>
-        <br />
-        <br />
+        <Space size={48}></Space>
 
         <Input value={"E-mail"}></Input>
-        <br />
-        <br />
-        <br />
-        <br />
+        <Space size={32}></Space>
         <div
           css={css`
             position: relative;
@@ -50,21 +41,18 @@ const SignupPage = () => {
             align-items: center;
           `}
         >
-          <div>(선택) 정기적 홍보 메일 수신</div>
+          <div
+            css={css`
+              font-size: 16px;
+            `}
+          >
+            (선택) 정기적 홍보 메일 수신
+          </div>
           <Switch></Switch>
         </div>
+        <Space size={194}></Space>
 
-        <br />
-        <br />
-        <br />
-        <br />
-        <Button
-          css={css`
-            position: relative;
-            bottom: 10px;
-          `}
-          text={"회원가입"}
-        ></Button>
+        <Button text={"회원가입"}></Button>
       </form>
     </div>
   );

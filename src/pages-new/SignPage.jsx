@@ -3,6 +3,8 @@
 import { css } from "@emotion/react";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
+import Space from "../components/Space";
 
 const SignPage = () => {
   return (
@@ -10,25 +12,25 @@ const SignPage = () => {
       css={css`
         text-align: center;
         position: relative;
-        top: 200px;
+        top: 50%;
+        transform: translate(0, -50%);
 
         flex-direction: column;
         display: flex;
       `}
     >
-      <Header></Header>
-      <Link to="/login">
+      <Link to="/signup">
         <Button text="로그인"></Button>
       </Link>
-      <br />
-      <Link to="/mailbox">
+      <Space size={40}></Space>
+      <Link to="/postbox/1">
         <Button text="우편함"></Button>
       </Link>
-      <br />
-      <Link to="/write">
+      <Space size={40}></Space>
+
+      <Link to="/write/1">
         <Button text="편지 작성하기"></Button>
       </Link>
-      <br />
     </div>
   );
 };
