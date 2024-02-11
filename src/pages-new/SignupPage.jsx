@@ -3,11 +3,16 @@
 import { css } from "@emotion/react";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
-import HeaderDefault from "../components/HeaderDefault";
+
 import Input from "../components/Input";
 import { Switch } from "@mui/material";
+import Header from "../components/Header";
+import Space from "../components/Space";
+import { useState } from "react";
 
-const LoginPage = () => {
+const SignupPage = () => {
+  const [user, setUser] = useState();
+
   return (
     <div
       css={css`
@@ -17,30 +22,20 @@ const LoginPage = () => {
         justify-content: space-between;
       `}
     >
-      <HeaderDefault text="로그인"></HeaderDefault>
-      <br />
-      <br />
-      <br />
-      <br />
-
+      <Header text={"회원가입"} link={"/sign"}></Header>
+      <Space size={128}></Space>
       <form
         css={css`
-          height: 515px;
+          height: 556px;
         `}
       >
         <Input value={"이름"}></Input>
-        <br />
-        <br />
-
+        <Space size={20}></Space>
         <Input value={"Instagram ID"}></Input>
-        <br />
-        <br />
+        <Space size={48}></Space>
 
         <Input value={"E-mail"}></Input>
-        <br />
-        <br />
-        <br />
-        <br />
+        <Space size={32}></Space>
         <div
           css={css`
             position: relative;
@@ -49,24 +44,21 @@ const LoginPage = () => {
             align-items: center;
           `}
         >
-          <div>(선택) 정기적 홍보 메일 수신</div>
+          <div
+            css={css`
+              font-size: 16px;
+            `}
+          >
+            (선택) 정기적 홍보 메일 수신
+          </div>
           <Switch></Switch>
         </div>
+        <Space size={194}></Space>
 
-        <br />
-        <br />
-        <br />
-        <br />
-        <Button
-          css={css`
-            position: relative;
-            bottom: 10px;
-          `}
-          text={"회원가입"}
-        ></Button>
+        <Button text={"회원가입"}></Button>
       </form>
     </div>
   );
 };
 
-export default LoginPage;
+export default SignupPage;

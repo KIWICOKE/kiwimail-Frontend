@@ -1,10 +1,9 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from "@emotion/react";
-import Back from "../assets/BackButton.svg";
-import { Link } from "react-router-dom";
+import Menu from "../assets/menu.png";
 
-const Header = ({ text, link }) => {
+const Title = ({ name }) => {
   return (
     <div>
       <div
@@ -23,34 +22,26 @@ const Header = ({ text, link }) => {
             padding: 0px 16px 0px 16px;
           `}
         >
-          <Link to={link}>
-            <img
-              src={Back}
-              alt={"BackButton"}
-              css={css`
-                height: 24px;
-              `}
-              onClick={() => {}}
-            ></img>
-          </Link>
-
           <div
             css={css`
               font-size: 20px;
               font-weight: bold;
             `}
           >
-            {text}
+            {`${name}의 우편함`}
           </div>
-          <div
+          <img
+            src={Menu}
+            alt={"MenuButton"}
             css={css`
-              width: 16px;
+              height: 24px;
             `}
-          ></div>
+            onClick={() => {}}
+          ></img>
         </div>
       </div>
     </div>
   );
 };
 
-export default Header;
+export default Title;
