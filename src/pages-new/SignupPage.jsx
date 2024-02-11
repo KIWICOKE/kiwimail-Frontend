@@ -8,8 +8,11 @@ import Input from "../components/Input";
 import { Switch } from "@mui/material";
 import Header from "../components/Header";
 import Space from "../components/Space";
+import { useState } from "react";
 
 const SignupPage = () => {
+  const [user, setUser] = useState();
+
   return (
     <div
       css={css`
@@ -19,7 +22,7 @@ const SignupPage = () => {
         justify-content: space-between;
       `}
     >
-      <Header text={"회원가입"}></Header>
+      <Header text={"회원가입"} link={"/sign"}></Header>
       <Space size={128}></Space>
       <form
         css={css`

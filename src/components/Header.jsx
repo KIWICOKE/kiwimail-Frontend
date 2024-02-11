@@ -2,8 +2,9 @@
 
 import { css } from "@emotion/react";
 import Back from "../assets/BackButton.svg";
+import { Link } from "react-router-dom";
 
-const Header = ({ text }) => {
+const Header = ({ text, link }) => {
   return (
     <div>
       <div
@@ -22,14 +23,17 @@ const Header = ({ text }) => {
             padding: 0px 16px 0px 16px;
           `}
         >
-          <img
-            src={Back}
-            alt={"BackButton"}
-            css={css`
-              height: 24px;
-            `}
-            onClick={() => {}}
-          ></img>
+          <Link to={link}>
+            <img
+              src={Back}
+              alt={"BackButton"}
+              css={css`
+                height: 24px;
+              `}
+              onClick={() => {}}
+            ></img>
+          </Link>
+
           <div
             css={css`
               font-size: 20px;
