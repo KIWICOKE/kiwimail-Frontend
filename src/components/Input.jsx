@@ -5,6 +5,7 @@ const Input = ({ value }) => {
   return (
     <input
       value={value}
+      pl={pl}
       css={css`
         width: 295px;
         height: 16px;
