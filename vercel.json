@@ -7,6 +7,10 @@
     {
       "source": "/api/:path*/",
       "destination": "https://kiwicoke.com/:path*/"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
 
