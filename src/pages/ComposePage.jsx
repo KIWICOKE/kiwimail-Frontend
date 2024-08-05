@@ -5,7 +5,7 @@ const ComposePage = () => {
   return (
     <div>
       <Header></Header>
-      <h1>Compose Page</h1>
+      <h1>폰트 확인</h1>
     </div>
   );
 };
