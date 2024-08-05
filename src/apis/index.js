@@ -1,7 +1,8 @@
 import axios from "axios";
+import { BASE_URL } from "../shared/constant";
 
 const axiosClient = axios.create({
-  baseURL: "https://www.kiwicoke.com",
+  baseURL: BASE_URL,
   Headers: { "Content-Type": "application/json" },
 });
 
