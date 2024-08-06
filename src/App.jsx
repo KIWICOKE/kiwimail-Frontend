@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+import TestPage from "./pages-new/TestPage";
+import SignPage from "./pages-new/SignPage";
 
+import SignupPage from "./pages-new/SignupPage";
+
+import PostboxPage from "./pages-new/PostboxPage";
+import PostListPage from "./pages-new/PostListPage";
+
+import PostPage from "./pages-new/PostPage";
+import ComposePage from "./pages/ComposePage";
+
+import Home from "./layouts/Home";
+
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route path="/test" element={<TestPage />}></Route>
+          <Route path="/login" element={<SignPage />}></Route>
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/postbox/:user_id" element={<PostboxPage />} />
+          <Route path="/postlist/:user_id" element={<PostListPage />} />
+          <Route path="/post/:post_id" element={<PostPage />} />
+          <Route path="/write/:post_id" element={<ComposePage />} />
+        </Route>
+      </Routes>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
