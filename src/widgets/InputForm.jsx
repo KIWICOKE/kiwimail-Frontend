@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Space, Flex } from "../shared/Tool";
 import { useState } from "react";
+import { Button } from "../components/Button";
 
 const Wrapper = styled(Flex)``;
 
@@ -17,12 +18,26 @@ const Input = styled.input`
 
 export const InputForm = () => {
   let [name, setName] = useState("");
+  let [insta, setInsta] = useState("");
+
+  const handleSignUp = () => {};
+
   return (
     <Wrapper direction="column">
       <form>
-        <Input placeholder={"이름"}></Input>
-        <Input placeholder={"Instagram ID"}></Input>
-        <Input placeholder={"E-mail"}></Input>
+        <Input
+          placeholder={"이름"}
+          type={"text"}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        ></Input>
+        <Input
+          placeholder={"Instagram ID"}
+          type={"text"}
+          value={insta}
+          onChange={(e) => setInsta(e.target.value)}
+        ></Input>
+        <Button text={"회원가입"} onClick></Button>
       </form>
     </Wrapper>
   );
