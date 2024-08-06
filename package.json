@@ -10,6 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/css": "^11.13.0",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@tanstack/react-query": "^5.51.21",
+    "@tanstack/react-query-devtools": "^5.51.21",
+    "axios": "^1.7.3",
+    "jotai": "^2.9.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -22,5 +30,6 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "vite": "^5.3.4"
-  }
+  },
+  "packageManager": "yarn@4.4.0"
 }

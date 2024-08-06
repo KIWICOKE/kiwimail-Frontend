@@ -1,15 +1,15 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import TestPage from "./pages-new/TestPage";
-import SignPage from "./pages-new/SignPage";
+import TestPage from "./pages/TestPage";
+import SignPage from "./pages/SignPage";
 
-import SignupPage from "./pages-new/SignupPage";
+import SignupPage from "./pages/SignupPage";
 
-import PostboxPage from "./pages-new/PostboxPage";
-import PostListPage from "./pages-new/PostListPage";
+import PostboxPage from "./pages/PostboxPage";
+import PostListPage from "./pages/PostListPage";
 
-import PostPage from "./pages-new/PostPage";
+import PostPage from "./pages/PostPage";
 import ComposePage from "./pages/ComposePage";
 
 import Home from "./layouts/Home";
