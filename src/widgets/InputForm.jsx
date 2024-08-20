@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Space, Flex } from "../shared/Tool";
 import { useState } from "react";
-import { Button } from "../components/Button";
+import Button from "../components/Button";
 
 const Wrapper = styled(Flex)``;
 
@@ -37,7 +37,7 @@ export const InputForm = () => {
           value={insta}
           onChange={(e) => setInsta(e.target.value)}
         ></Input>
-        <Button text={"회원가입"} onClick></Button>
+        <Button>가입하기</Button>
       </form>
     </Wrapper>
   );

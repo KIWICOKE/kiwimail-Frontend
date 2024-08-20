@@ -1,23 +1,23 @@
-/** @jsxImportSource @emotion/react */
+import styled from "@emotion/styled";
 
-const Button = ({ text }) => {
-  const buttonStyle = {
-    width: "327px",
-    height: "56px",
-    padding: "10px",
-    backgroundColor: "#f5f5f5",
-    color: "#000000",
-    border: "none",
-    borderRadius: "24px",
-    fontSize: "16px",
-    fontWeight: "bold",
+const Button = styled.button`
+  width: 327px;
+  height: 56px;
 
-    "&:hover": {
-      backgroundColor: "#d9d9d9",
-    },
-  };
+  padding: 10px;
 
-  return <button css={buttonStyle}>{text}</button>;
-};
+  background-color: #f5f5f5;
+  color: #000000;
+
+  border: none;
+  border-radius: 24px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #d9d9d9;
+  }
+`;
 
 export default Button;
