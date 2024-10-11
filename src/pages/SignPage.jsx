@@ -4,7 +4,7 @@ import { css } from "@emotion/react";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import Space from "../components/Space";
+import { Space } from "../shared/Tool";
 
 const SignPage = () => {
   return (
@@ -20,16 +20,16 @@ const SignPage = () => {
       `}
     >
       <Link to="/signup">
-        <Button text="로그인"></Button>
+        <Button>로그인</Button>
       </Link>
-      <Space size={40}></Space>
+      <Space height={40}></Space>
       <Link to="/postbox/1">
-        <Button text="우편함"></Button>
+        <Button>우편함</Button>
       </Link>
-      <Space size={40}></Space>
+      <Space height={40}></Space>
 
       <Link to="/write/1">
-        <Button text="편지 작성하기"></Button>
+        <Button>편지 작성하기</Button>
       </Link>
     </div>
   );

@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 import { Space, Flex } from "../shared/Tool";
 import { useState } from "react";
 import Button from "../components/Button";
+import loginAPI from "../apis/loginAPI";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled(Flex)``;
 
@@ -17,27 +19,40 @@ const Input = styled.input`
 `;
 
 export const InputForm = () => {
+  const navigate = useNavigate();
   let [name, setName] = useState("");
   let [insta, setInsta] = useState("");
 
-  const handleSignUp = () => {};
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+
+    const response = loginAPI.SIGNUP({
+      Name: name,
+      Insta: insta,
+    });
+
+    if (response.status === 200) {
+    }
+  };
 
   return (
     <Wrapper direction="column">
-      <form>
+      <form onSubmit={handleSignUp}>
         <Input
           placeholder={"이름"}
           type={"text"}
           value={name}
           onChange={(e) => setName(e.target.value)}
         ></Input>
+        <Space height={20}></Space>
         <Input
           placeholder={"Instagram ID"}
           type={"text"}
           value={insta}
           onChange={(e) => setInsta(e.target.value)}
         ></Input>
-        <Button>가입하기</Button>
+        <Space height={20}></Space>
+        <Button onClick={handleSignUp}>가입하기</Button>
       </form>
     </Wrapper>
   );

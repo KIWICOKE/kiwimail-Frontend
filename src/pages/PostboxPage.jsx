@@ -24,7 +24,7 @@ const PostboxPage = () => {
 
   return (
     <div>
-      <Title name={user?.name || "가짜이혁"}></Title>
+      <Title name={user?.name || "키위콕"}></Title>
       <Subtitle count={10}></Subtitle>
       <div
         css={css`
